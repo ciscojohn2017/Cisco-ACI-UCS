@@ -1,0 +1,80 @@
+{
+	"id": "7dce721a-45c8-cb54-694a-b1bce3bf46f7",
+	"name": "Vmm-JSON-Scripts",
+	"timestamp": 1445099568999,
+	"order": [
+		"9c7db11a-6039-1f37-8e1b-7a30c7b842ad",
+		"abb27f5c-10c4-ef42-def8-e06273734b25",
+		"2b485b48-f4d8-5dec-26c4-5a0fd71c2ece",
+		"46caba52-8eb5-0308-a4b3-b7bf5b61fc3b"
+	],
+	"owner": 0,
+	"hasRequests": true,
+	"requests": [
+		{
+			"collectionId": "7dce721a-45c8-cb54-694a-b1bce3bf46f7",
+			"id": "2b485b48-f4d8-5dec-26c4-5a0fd71c2ece",
+			"name": "Vmm-AAEP",
+			"description": "",
+			"url": "http://192.168.10.1/api/node/mo/uni.json",
+			"method": "POST",
+			"headers": "",
+			"data": [],
+			"dataMode": "raw",
+			"timestamp": 0,
+			"version": 2,
+			"preRequestScript": "",
+			"tests": "",
+			"rawModeData": "{\n  \"infraInfra\":{\n    \"attributes\":{\n    \"dn\":\"uni/infra\",\"status\":\"modified\"\n  },\n    \"children\":[\n      {\n        \"fvnsVlanInstP\":{\n          \"attributes\":{\n            \"dn\":\"uni/infra/vlanns-[Vmm-VLANS]-dynamic\",\"name\":\"Vmm-VLANS\",\"rn\":\"vlanns-[Vmm-VLANS]-dynamic\",\"status\":\"created\"},\"children\":[\n              {\n                \"fvnsEncapBlk\":{\n                  \"attributes\":{\n                    \"dn\":\"uni/infra/vlanns-[Vmm-VLANS]-dynamic/from-[vlan-100]-to-[vlan-200]\",\"from\":\"vlan-100\",\"to\":\"vlan-200\",\"rn\":\"from-[vlan-100]-to-[vlan-200]\",\"status\":\"created\"\n                  },\n                  \"children\":[]\n                }\n              }\n            ]\n        }\n      },\n      {\n        \"infraAttEntityP\":{\n          \"attributes\":{\n            \"dn\":\"uni/infra/attentp-Vmm-AAEP\",\"name\":\"Vmm-AAEP\",\"rn\":\"attentp-Vmm-AAEP\",\"status\":\"created\"\n          },\n          \"children\":[\n            {\n              \"infraRsDomP\":{\n                \"attributes\":{\n                  \"tDn\":\"uni/vmmp-VMware/dom-Vmm-Datacenter-1\"\n                }\n              }\n            }\n          ]\n        }\n      },\n      {\n        \"infraFuncP\":{\n          \"attributes\":{\n            \"dn\":\"uni/infra/funcprof\",\"status\":\"modified\"\n          },\"children\":[\n            {\n              \"infraAccPortGrp\":{\n                \"attributes\":{\n                  \"dn\":\"uni/infra/funcprof/accportgrp-Vmm-APPG\",\"status\":\"modified\"},\"children\":[\n                    {\n                      \"infraRsAttEntP\":{\n                        \"attributes\":{\n                          \"tDn\":\"uni/infra/attentp-Vmm-AAEP\",\"status\":\"created,modified\"\n                        },\n                        \"children\":[]\n                      }\n                    }\n                  ]\n              }\n            }\n          ]\n        }\n      },\n      {\n        \"cdpIfPol\":{\n        \"attributes\":{\n          \"dn\":\"uni/infra/cdpIfP-cdp_enable\",\"name\":\"cdp_enable\",\"rn\":\"cdpIfP-cdp_enable\",\"status\":\"created\"\n        },\"children\":[]\n      }\n    },\n    {\n      \"lldpIfPol\":{\n      \"attributes\":{\n        \"dn\":\"uni/infra/lldpIfP-lldp_enable\",\"name\":\"lldp_enable\",\"rn\":\"lldpIfP-lldp_enable\",\"status\":\"created\"\n      },\"children\":[]\n      }\n    },\n      {\n        \"infraNodeP\":{\n          \"attributes\":{\n            \"dn\":\"uni/infra/nprof-Vmm-SP\",\"name\":\"Vmm-SP\",\"rn\":\"nprof-Vmm-SP\",\"status\":\"created,modified\"\n          },\n          \"children\":[\n            {\n              \"infraLeafS\":{\n                \"attributes\":{\n                  \"dn\":\"uni/infra/nprof-Vmm-SP/leaves-Vmm-SS-typ-range\",\"type\":\"range\",\"name\":\"Vmm-SS\",\"rn\":\"leaves-Vmm-SS-typ-range\",\"status\":\"created\"},\n                \"children\":[\n                  {\n                    \"infraNodeBlk\":{\n                      \"attributes\":{\n                        \"dn\":\"uni/infra/nprof-Vmm-SP/leaves-Vmm-SS-typ-range/nodeblk-2968726e4aa823ab\",\"from_\":\"101\",\"to_\":\"102\",\"name\":\"2968726e4aa823ab\",\"rn\":\"nodeblk-2968726e4aa823ab\",\"status\":\"created\"\n                      },\"children\":[]\n                    }\n                  }\n                ]\n              }\n            },\n            {\n              \"infraRsAccPortP\":{\n              \"attributes\":{\n                \"tDn\":\"uni/infra/accportprof-Vmm-PORTS\",\"status\":\"created,modified\"},\n                \"children\":[]\n              }\n            }\n          ]\n        }\n      },\n      {\n        \"infraAccPortP\":{\n        \"attributes\":{\n          \"dn\":\"uni/infra/accportprof-Vmm-PORTS\",\"name\":\"Vmm-PORTS\",\"rn\":\"accportprof-Vmm-PORTS\",\"status\":\"created,modified\"\n        },\n        \"children\":[\n          {\n            \"infraHPortS\":{\n              \"attributes\":{\n                \"dn\":\"uni/infra/accportprof-Vmm-PORTS/hports-Vmm-PS-typ-range\",\"name\":\"Vmm-PS\",\"rn\":\"hports-Vmm-PS-typ-range\",\"status\":\"created,modified\"\n              },\"children\":[\n                {\n                  \"infraPortBlk\":{\n                    \"attributes\":{\n                      \"dn\":\"uni/infra/accportprof-Vmm-PORTS/hports-Vmm-PS-typ-range/portblk-block2\",\"toPort\":\"2\",\"name\":\"block2\",\"rn\":\"portblk-block2\",\"status\":\"created,modified\"\n                    },\n                    \"children\":[]\n                  }\n                },\n                {\n                  \"infraRsAccBaseGrp\":{\n                    \"attributes\":{\n                      \"tDn\":\"uni/infra/funcprof/accportgrp-Vmm-APPG\",\"status\":\"created,modified\"},\"children\":[]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}\n}"
+		},
+		{
+			"collectionId": "7dce721a-45c8-cb54-694a-b1bce3bf46f7",
+			"id": "46caba52-8eb5-0308-a4b3-b7bf5b61fc3b",
+			"name": "Vmm-DOMAIN",
+			"description": "",
+			"url": "http://192.168.10.1/api/node/mo/uni/vmmp-VMware/dom-Vmm-Datacenter-1.json",
+			"method": "POST",
+			"headers": "",
+			"data": [],
+			"dataMode": "raw",
+			"timestamp": 0,
+			"version": 2,
+			"preRequestScript": "",
+			"tests": "",
+			"rawModeData": "{\n\t\"totalCount\": \"1\",\n\t\"imdata\": [{\n\t\t\"vmmDomP\": {\n\t\t\t\"attributes\": {\n\t\t\t\t\"dn\": \"uni/vmmp-VMware/dom-Vmm-Datacenter-1\",\n\t\t\t\t\"enfPref\": \"hw\",\n\t\t\t\t\"mcastAddr\": \"0.0.0.0\",\n\t\t\t\t\"mode\": \"default\",\n\t\t\t\t\"name\": \"Vmm-Datacenter-1\",\n\t\t\t\t\"ownerKey\": \"\",\n\t\t\t\t\"ownerTag\": \"\"\n\t\t\t},\n\t\t\t\"children\": [{\n\t\t\t\t\"vmmRsDefaultStpIfPol\": {\n\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\"tnStpIfPolName\": \"default\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"vmmRsDefaultFwPol\": {\n\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\"tnNwsFwPolName\": \"default\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"vmmRsDefaultLldpIfPol\": {\n\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\"tnLldpIfPolName\": \"default\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"vmmCtrlrP\": {\n\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\"dvsVersion\": \"5.5\",\n\t\t\t\t\t\t\"hostOrIp\": \"192.168.10.30\",\n\t\t\t\t\t\t\"inventoryTrigSt\": \"untriggered\",\n\t\t\t\t\t\t\"mode\": \"default\",\n\t\t\t\t\t\t\"msftConfigIssues\": \"\",\n\t\t\t\t\t\t\"name\": \"Vmm-VC\",\n\t\t\t\t\t\t\"port\": \"0\",\n\t\t\t\t\t\t\"rootContName\": \"Datacenter-1\",\n\t\t\t\t\t\t\"scope\": \"vm\",\n\t\t\t\t\t\t\"statsMode\": \"disabled\"\n\t\t\t\t\t},\n\t\t\t\t\t\"children\": [{\n\t\t\t\t\t\t\"vmmRsAcc\": {\n\t\t\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\t\t\"tDn\": \"uni/vmmp-VMware/dom-Vmm-Datacenter-1/usracc-Vmm-CREDS\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}]\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"infraRsVlanNs\": {\n\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\"tDn\": \"uni/infra/vlanns-[Vmm-VLANS]-dynamic\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"vmmRsDefaultCdpIfPol\": {\n\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\"tnCdpIfPolName\": \"default\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"vmmRsDefaultLacpLagPol\": {\n\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\"tnLacpLagPolName\": \"default\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"vmmRsDefaultL2InstPol\": {\n\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\"tnL2InstPolName\": \"default\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"vmmUsrAccP\": {\n\t\t\t\t\t\"attributes\": {\n\t\t\t\t\t\t\"descr\": \"\",\n\t\t\t\t\t\t\"name\": \"Vmm-CREDS\",\n\t\t\t\t\t\t\"ownerKey\": \"\",\n\t\t\t\t\t\t\"ownerTag\": \"\",\n\t\t\t\t\t\t\"usr\": \"root\"\n                        \"pwd\":\"NXos12345\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}]\n\t\t}\n\t}]\n}"
+		},
+		{
+			"collectionId": "7dce721a-45c8-cb54-694a-b1bce3bf46f7",
+			"id": "9c7db11a-6039-1f37-8e1b-7a30c7b842ad",
+			"name": "Login",
+			"description": "",
+			"url": "http://192.168.10.1/api/mo/aaaLogin.xml",
+			"method": "POST",
+			"headers": "",
+			"data": [],
+			"dataMode": "raw",
+			"timestamp": 0,
+			"responses": [],
+			"version": 2,
+			"preRequestScript": "",
+			"tests": "",
+			"rawModeData": "<!-- AAA Login-->\n\n<aaaUser name='admin' pwd='NXos12345'/>"
+		},
+		{
+			"collectionId": "7dce721a-45c8-cb54-694a-b1bce3bf46f7",
+			"id": "abb27f5c-10c4-ef42-def8-e06273734b25",
+			"name": "Vmm-APPG",
+			"description": "",
+			"url": "http://192.168.10.1/api/node/mo/uni/infra/funcprof.json",
+			"method": "POST",
+			"headers": "",
+			"data": [],
+			"dataMode": "raw",
+			"timestamp": 0,
+			"version": 2,
+			"preRequestScript": "",
+			"tests": "",
+			"rawModeData": "{\n  \"infraAccPortGrp\":{\n        \"attributes\":{\n          \"dn\":\"uni/infra/funcprof/accportgrp-Vmm-APPG\",\"name\":\"Vmm-APPG\",\"rn\":\"accportgrp-Vmm-APPG\",\"status\":\"created\"\n        },\n        \"children\":[\n          {\n            \"infraRsCdpIfPol\":{\n            \"attributes\":{\n              \"tnCdpIfPolName\":\"cdp_enable\",\"status\":\"created,modified\"\n            },\n            \"children\":[]\n          }\n          },\n          {\n            \"infraRsLldpIfPol\":{\n            \"attributes\":{\n              \"tnLldpIfPolName\":\"lldp_enable\",\"status\":\"created,modified\"\n            },\n              \"children\":[]\n            }\n          }\n        ]\n  }\n}"
+		}
+	]
+}
